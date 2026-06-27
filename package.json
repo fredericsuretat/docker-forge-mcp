@@ -1,0 +1,52 @@
+{
+  "name": "docker-forge-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Docker stack automation — generate, audit, and tune Docker Compose stacks inside Claude Code. Pure logic, no API keys, $0 to run.",
+  "type": "module",
+  "bin": {
+    "docker-forge-mcp": "src/server.js",
+    "docker-forge-mcp-http": "src/http-server.js"
+  },
+  "main": "src/compose-gen.js",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/server.js",
+    "start:http": "node src/http-server.js",
+    "test": "node test/smoke.mjs",
+    "build": "node -e \"process.exit(0)\""
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "docker",
+    "compose",
+    "devops",
+    "traefik",
+    "security",
+    "audit",
+    "infrastructure",
+    "claude-code",
+    "cursor",
+    "dockerfile",
+    "stack",
+    "generator"
+  ],
+  "license": "MIT",
+  "author": "Frederic Suretat",
+  "homepage": "https://frederic.suretat.com/lab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fredericsuretat/docker-forge-mcp"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "js-yaml": "^4.1.0"
+  }
+}

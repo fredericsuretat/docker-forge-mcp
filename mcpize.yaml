@@ -1,0 +1,16 @@
+# MCPize manifest - https://mcpize.com
+version: 1
+name: docker-forge-mcp
+description: >-
+  Generate, audit, and tune Docker Compose stacks inside Claude Code — before you copy-paste anything.
+  Pure logic, no API keys, $0 to run. generate_stack builds production-ready compose files with
+  security best practices. audit_compose finds vulnerabilities. add_traefik generates Traefik v3 labels.
+runtime: typescript
+entry: src/server.js
+build:
+  install: npm install
+startCommand:
+  type: stdio
+  command: node
+  args:
+    - src/server.js
